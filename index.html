@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional academic profile of Punya Laxmi Manandhar, Assistant Professor of Physiology at the School of Medicine, Maldives National University.">
+  <title>Punya Laxmi Manandhar | Assistant Professor of Physiology</title>
+  <style>
+    :root {
+      --ink: #173b3a;
+      --muted: #4b6765;
+      --page: #f2f8f7;
+      --surface: #ffffff;
+      --primary: #12635f;
+      --primary-dark: #0c4946;
+      --accent: #f1b85b;
+      --line: #c9dfdc;
+      --focus: #9a4e00;
+      --radius: 24px;
+      --shadow: none;
+      --max: 70rem;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    a { color: var(--primary-dark); text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: .16em; }
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    h1, h2, h3 { line-height: 1.2; margin-top: 0; }
+    h1 {
+      max-width: 14ch;
+      margin-bottom: .5rem;
+      font-size: clamp(2.35rem, 6vw, 4.5rem);
+      letter-spacing: -.035em;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.55rem);
+      color: var(--primary-dark);
+    }
+    h3 {
+      margin-bottom: .45rem;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+    }
+    p { margin-top: 0; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 20;
+      top: .75rem;
+      left: .75rem;
+      padding: .7rem 1rem;
+      color: #fff;
+      background: #000;
+      transform: translateY(-180%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header-inner {
+      min-height: 4.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: grid;
+      width: 2.8rem;
+      height: 2.8rem;
+      place-items: center;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 50%;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: .35rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: block;
+      padding: .38rem .65rem;
+      color: var(--primary-dark);
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover { background: #deefed; }
+
+    main:focus { outline: none; }
+
+    .hero {
+      padding-block: 1rem 2.5rem;
+      background: var(--surface);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      gap: 3rem;
+      align-items: center;
+      padding: clamp(2.5rem, 7vw, 5.5rem);
+      background: #dff1ee;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .eyebrow {
+      margin-bottom: .75rem;
+      color: var(--primary);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .role {
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      font-weight: 700;
+    }
+
+    .intro {
+      max-width: 42rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.6rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.8rem;
+      padding: .65rem 1rem;
+      border: 2px solid var(--primary);
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button-primary {
+      color: #fff;
+      background: var(--primary);
+    }
+
+    .button-secondary {
+      color: var(--primary-dark);
+      background: transparent;
+    }
+
+    .profile-card {
+      padding: 1.6rem;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      width: 9rem;
+      height: 9rem;
+      margin-inline: auto;
+      border: 6px solid #c3e3df;
+      border-radius: 34% 66% 56% 44% / 44% 40% 60% 56%;
+      object-fit: cover;
+    }
+
+    .facts {
+      display: grid;
+      gap: .7rem;
+      margin: 1.25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .facts strong {
+      display: block;
+      color: var(--primary-dark);
+    }
+
+    .content-section {
+      padding-block: clamp(3.2rem, 7vw, 5rem);
+      scroll-margin-top: 1rem;
+    }
+
+    .content-section:nth-of-type(odd) {
+      background: #e9f4f2;
+    }
+
+    .section-heading {
+      max-width: 46rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .two-column,
+    .card-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .two-column {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 1.4rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card::before {
+      content: "";
+      display: block;
+      width: 2.5rem;
+      height: .32rem;
+      margin-bottom: 1rem;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+      margin: 1.4rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: .35rem .7rem;
+      color: var(--primary-dark);
+      background: #d8ece9;
+      border: 1px solid #afd5d1;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .publication-link {
+      display: inline-block;
+      margin-top: .75rem;
+      font-weight: 700;
+    }
+
+    .site-footer {
+      padding-block: 2rem;
+      color: #d6efec;
+      background: #083b38;
+    }
+
+    .site-footer p { margin: 0; }
+
+    @media (max-width: 48rem) {
+      html { scroll-behavior: auto; }
+
+      .site-header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: .85rem;
+      }
+
+      nav ul { justify-content: flex-start; }
+
+      .hero-grid,
+      .two-column,
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 2rem;
+        padding-inline: 1rem;
+      }
+
+      .profile-card { max-width: 26rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="#top" aria-label="Punya Laxmi Manandhar profile home">PL</a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#publications">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="hero" id="top" aria-labelledby="profile-name">
+      <div class="container hero-grid">
+
+        <div>
+          <p class="eyebrow">Professional Profile</p>
+          <h1 id="profile-name">Punya Laxmi Manandhar</h1>
+
+          <p class="role">
+            Assistant Professor of Physiology | School of Medicine, Maldives National University
+          </p>
+
+          <p class="intro">
+            Assistant Professor of Physiology with expertise in teaching, academic mentoring,
+            and physiological sciences. Dedicated to delivering engaging, evidence-based
+            education and supporting students in developing strong foundational knowledge in
+            physiology. Interested in research, academic collaboration, and contributing to
+            the advancement of health sciences education.
+          </p>
+
+          <div class="actions">
+            <a class="button button-primary" href="#research">Explore research</a>
+            <a class="button button-secondary" href="#publications">View publications</a>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="Profile summary">
+          <img
+            class="profile-photo"
+            src="profile.jpg"
+            alt="Portrait of Punya Laxmi Manandhar"
+          >
+
+          <ul class="facts">
+            <li>
+              <strong>Role</strong>
+              Assistant Professor of Physiology
+            </li>
+            <li>
+              <strong>Organization</strong>
+              School of Medicine, Maldives National University
+            </li>
+            <li>
+              <strong>Focus</strong>
+              Human physiology, Physiology Research
+            </li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="introduction" aria-labelledby="introduction-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Introduction</p>
+          <h2 id="introduction-title">Professional Summary</h2>
+          <p>
+            Assistant Professor of Physiology with expertise in teaching, academic mentoring,
+            and physiological sciences.
+          </p>
+        </div>
+
+        <div class="two-column">
+
+          <article class="card">
+            <h3>Teaching and Mentoring</h3>
+            <p>
+              Dedicated to delivering engaging, evidence-based education and supporting students
+              in developing strong foundational knowledge in physiology.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Academic Interests</h3>
+            <p>
+              Interested in research, academic collaboration, and contributing to the advancement
+              of health sciences education.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="teaching" aria-labelledby="teaching-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Teaching</p>
+          <h2 id="teaching-title">Teaching Areas</h2>
+          <p>
+            Teaching interests include human physiology, practical physiology, and clinical
+            application of physiological concepts.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Human Physiology</h3>
+            <p>
+              Cardiovascular, respiratory, renal, endocrine, gastrointestinal, reproductive,
+              blood and lymph, and neuroscience.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Practical Physiology</h3>
+            <p>
+              Practical physiology and laboratory-based learning.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Clinical Application</h3>
+            <p>
+              Clinical application of physiology-based concepts.
+            </p>
+          </article>
+
+        </div>
+
+        <ul class="tag-list" aria-label="Teaching areas">
+          <li>Cardiovascular Physiology</li>
+          <li>Respiratory Physiology</li>
+          <li>Renal Physiology</li>
+          <li>Endocrine Physiology</li>
+          <li>Gastrointestinal Physiology</li>
+          <li>Neuroscience</li>
+          <li>Blood and Lymph</li>
+          <li>Reproductive Physiology</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="research" aria-labelledby="research-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">Research Interests</h2>
+          <p>
+            Research interests focus on human physiology, clinical and applied physiology,
+            and health science education.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Human and Systemic Physiology</h3>
+            <p>
+              Human physiology and mechanisms underlying normal and altered body functions.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Clinical and Applied Physiology</h3>
+            <p>
+              Clinical and applied physiology with an interest in translating physiological
+              knowledge into improved health and patient care.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Health Science Education</h3>
+            <p>
+              Health science education, innovative teaching methods, and research that supports
+              learning in physiology.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Professional Experience</h2>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Assistant Professor of Physiology</h3>
+            <p>
+              School of Medicine, Maldives National University — 2022–Present
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Lecturer in Physiology</h3>
+            <p>
+              Kathmandu Medical College, Nepal — 2018–2021
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Tutor in Anatomy</h3>
+            <p>
+              Kathmandu Medical College, Nepal — 2007–2009
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="publications" aria-labelledby="publications-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2 id="publications-title">Publications &amp; Research</h2>
+          <p>
+            Selected publications and ongoing research.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Factors affecting Dementia: A study conducted at HDA. Kulhudhuffushi, Maldives.</h3>
+            <p>
+              Ongoing research, 2026.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              Thrombosis with Thrombocytopenia Syndrome (TTS) Associated with COVID-19 Vaccines:
+              Its Safety, Security and Grave Concern
+            </h3>
+            <a
+              class="publication-link"
+              href="https://dx.doi.org/10.4314/emj.v63 i04"
+            >
+              Publication DOI
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>
+              Systematic Review: Vitamin D Deficiency in Women and Correlation with Lifestyle
+              for Women: A Focus on Asian Women
+            </h3>
+            <a
+              class="publication-link"
+              href="https://doi.org/10.62338/y02qtv97"
+            >
+              Publication DOI
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Punya Laxmi Manandhar | Assistant Professor of Physiology | School of Medicine, Maldives National University</p>
+    </div>
+  </footer>
+
+</body>
+</html>
